@@ -1,0 +1,23 @@
+.container
+{
+	background: #000;
+	color: #fff;
+	font-family: Arial, cursive;
+	font-size: large
+}
+
+.TrainDestination
+{
+	color: #ffae00;
+}
+
+.footer,.header 
+{
+	background: hsla(210, 95%, 20%, 0.90);
+}
+
+.trainFont 
+{
+	font-size: medium;
+	font-family: Arial;
+}

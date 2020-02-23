@@ -1,84 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Middlesbrough Depatures</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <style>
-        .container
-		{
-            background: #000;
-            color: #fff;
-            font-family: Arial, cursive;
-            font-size: large
-        }
-        
-        .TrainDestination
-		{
-            color: #ffae00;
-        }
-        
-        .footer,.header 
-		{
-            background: hsla(210, 95%, 20%, 0.90);
-        }
-		
-		.trainFont 
-		{
-            font-size: medium;
-			font-family: Arial;
-        }
-    </style>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<title>Middlesbrough Depatures</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
 
-<body onload="startTime()" style="background:#000;">
-	<div id="temp"> <p style="color:white;"> Getting Data, Please wait...</p></div>
-	<div id="wrapper" style="display: none;">
-		
-		<!--- HEADER -->
-		<div class="container header">
-			<div class="row">
-				<div class="col-12">
-					<h1>Departures</h1></div>
-			</div>
-			<div class="row">
-				<div class="col-sm-1">Time</div>
-				<div class="col-sm-8">Destination</div>
-				<div class="col-sm-1 text-md-center">Platform</div>
-				<div class="col-sm-2 text-md-center">Expected</div>
-			</div>
-		</div>
-		
-		<!--- ROW -->
-		<div id ="trainTable" class="container border">
-			<!--<div class="row">
-				<div class="col-sm-1">21:47</div>
-				<div class="col-sm-8 TrainDestination">Darlington</div>
-				<div class="col-sm-1 text-md-center">1</div>
-				<div class="col-sm-2 text-md-center">On time</div>
-			</div>
-			<div  class="row">
-			</div>
-			<div class="row no-gutters" style="padding-left: 94px;">
-				<div class="col-sm-12 col-md-1 trainfont">Callling at:</div>
-				<div class="col-sm-8 col-md-8 trainfont">
-				  <marquee>Thornaby (00:00), Eaglescliffe (00:00), Allens West (00:00), Dinsdale (00:00), Darlington (00:00), xxxxxxx (11:11), xxxxxxx (11:11), xxxxxxx (11:11)</marquee>
+	<body onload="startTime()" style="background:#000;">
+		<div id="temp"> <p style="color:white;"> Getting Data, Please wait...</p></div>
+		<div id="wrapper" style="display: none;">
+
+			<!--- HEADER -->
+			<div class="container header">
+				<div class="row">
+					<div class="col-12">
+						<h1>Departures</h1></div>
 				</div>
-				<span class="trainfont"> Operated by Northern, this train has 2 carriages </span>
-			</div>-->
-		</div>
-		
-		<!--- FOOTER -->
-		<div class="container footer">
-			<div class="row">
-				<span id="nrccMessages" style="width:80%;"> The Ticket Vending Machines are currently out of order at this station.</span>
-				<div class="col text-right">Time now: <span id="clock"></span></div>
+				<div class="row">
+					<div class="col-sm-1">Time</div>
+					<div class="col-sm-8">Destination</div>
+					<div class="col-sm-1 text-md-center">Platform</div>
+					<div class="col-sm-2 text-md-center">Expected</div>
+				</div>
+			</div>
+
+			<!--- ROW -->
+			<div id ="trainTable" class="container border">
+			</div>
+
+			<!--- FOOTER -->
+			<div class="container footer">
+				<div class="row">
+					<span id="nrccMessages" style="width:80%;"> The Ticket Vending Machines are currently out of order at this station.</span>
+					<div class="col text-right">Time now: <span id="clock"></span></div>
+				</div>
 			</div>
 		</div>
-	</div>
-	
-</body>
+	</body>
 	<script src="trains.js?1"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </html>
